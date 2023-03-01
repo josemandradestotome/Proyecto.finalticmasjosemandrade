@@ -1,0 +1,199 @@
+/* la idea de los estilos salio del video jotredev
+@jotredev que pueden encontralo en https://www.youtube.com/watch?v=m_0YupLc6Fo&ab_channel=jotredev
+y el de Josue Oroya @oroyajs 
+trate de tomar algo de esos tutorial siguiendo algunos ejemplos y bueno ese fuel el resultado...
+(que puede tener fallas) desde ya muichas gracias por el tiempo*/
+
+
+:root {
+  --fontColor: rgba(218, 237, 253, 0.86);
+  --background: #b4b2b4;
+  --front: #525255;
+  --active: rgb(160, 156, 156) ;
+  --lightgray: #a5a1a1;
+  --blue: steelblue;
+  --white: #fff;
+  --black: rgba(0, 0, 0, 0.8);
+  --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: var(--fontColor);
+}
+
+html {
+  background-color: var(--background);
+}
+
+body {
+  min-height: 75vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav{
+  display: flex;
+  justify-content: center ;
+  background-color: var(--front);
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+a svg:hover path{
+  color: white;
+}
+
+.info-container, .btn-container{
+  padding: 0rem;
+}
+.cv {
+  background-color: var(--front);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+  min-width: 40vw;
+}
+#name {
+  text-align: center;
+  background-color: var(--fontColor);
+  color: var(--front);
+  border-radius: 4px 4px 0 0;
+  padding: 1vh;
+  margin-top:10px;
+}
+.info-container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.justify {
+  justify-content: space-around;
+}
+.info {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#profilePicture {
+  border-radius: 4px;
+  min-width: 10rem;
+}
+h3 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 4rem;
+}
+.skills {
+  font-size: 1.5rem;
+}
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button {
+  width: 45%;
+  padding: 8px;
+  background-color: var(--front);
+  border-color: var(--background);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+.button:hover {
+  background-color: var(--active);
+  color: var(--background);
+}
+.list {
+  margin-left: 34px;
+  list-style: none;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+  color: var(--background);
+}
+.modal-dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: var(--background);
+  overflow: auto;
+  cursor: default;
+}
+.modal-dialog > * {
+  padding: 1rem;
+}
+.modal-header,
+.modal-footer {
+  background: black (--front);
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.modal-title{
+    min-width: 93%;
+    text-align: center;
+}
+.modal-header > .button{
+    padding: 0;
+    max-width: 7%;
+    max-height: 10%;
+}
+
+.modal p + p {
+  margin-top: 1rem;
+}
+.modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+.modal-link{
+  display: block;
+  text-align: center;
+  margin-top: 2vh;
+}
+.modal-link:hover, .modal-link:hover svg path{
+  color: var(--white);
+}
+
+.modal-marg{
+  margin-bottom: 2vh;
+}
+.modal-insta{
+  margin-left: 1vh;
+  font-size: 3vh;
+}
